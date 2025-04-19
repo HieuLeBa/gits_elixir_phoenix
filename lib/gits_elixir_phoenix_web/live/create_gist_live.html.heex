@@ -1,0 +1,31 @@
+<div class="em-gradient flex items-center justify-center">
+  <h1 class="font-brand font-bold text-3xl text-white">Instantly share Elixir Code, notes, and Hieeus DDz</h1>
+</div>
+<.form for={@form}>
+  <div class="justify center px-28 w-full space-y-4 mb-10">
+    <.input field={@form[:description]} placeholder="Gist description..." autocomplete="off" />
+    <div>
+      <div class="flex p-2 items-center bg-emDark rounded-t-md border">
+        <div class="w-[300px] mb-2">
+          <.input
+            field={@form[:name]}
+            placeholder="Filename including extension..."
+            autocomplete="off"
+          />
+        </div>
+      </div>
+      <div class="flex-grow">
+        <.input
+          type="textarea"
+          field={@form[:markup_text]}
+          class="textarea w-full rounded-b-md"
+          placeholder="Insert code ...."
+          autocomplete="off"
+        />
+      </div>
+    </div>
+    <div class="flex justify-end">
+      <.button class="create_button">Create Gist</.button>
+    </div>
+  </div>
+</.form>
